@@ -1,0 +1,3 @@
+- Installed express
+- Created a server
+- Listened to port 3000

@@ -10,8 +10,10 @@ app.use(cookiesParser());
 
 
 const authRouter = require("./routes/auth")
+const restaurantRouter = require("./routes/restaurant")
 
 app.use("/", authRouter)
+app.use("/", restaurantRouter)
 
 
 connectDB()

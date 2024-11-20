@@ -7,4 +7,8 @@
    - Create jwt token and send the cookie added in token back to the user
    - Set expiry time of cookies as well
 
-- Created POST api for login 
+- Created POST api for login
+
+- Created a resturant schema where we have schema for individual items, categories and restaurants
+- Add restaurant router
+- Created POST api to add items to the specific restaurant

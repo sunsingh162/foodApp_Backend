@@ -1,20 +1,23 @@
-const express = require('express');
-const connectDB = require("./config/database")
+const express = require("express");
+const connectDB = require("./config/database");
 const app = express();
 
 const cookiesParser = require("cookie-parser");
 
-
 app.use(express.json());
 app.use(cookiesParser());
 
+const authRouter = require("./routes/auth");
+const restaurantRouter = require("./routes/restaurant");
+const productRouter = require("./routes/product");
+const cartRouter = require("./routes/cart");
+const profileRouter = require("./routes/profile")
 
-const authRouter = require("./routes/auth")
-const restaurantRouter = require("./routes/restaurant")
-
-app.use("/", authRouter)
-app.use("/", restaurantRouter)
-
+app.use("/", authRouter);
+app.use("/", restaurantRouter);
+app.use("/", productRouter);
+app.use("/", cartRouter);
+app.use("/", profileRouter);
 
 connectDB()
   .then(() => {

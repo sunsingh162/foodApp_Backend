@@ -9,6 +9,22 @@
 
 - Created POST api for login
 
-- Created a resturant schema where we have schema for individual items, categories and restaurants
-- Add restaurant router
-- Created POST api to add items to the specific restaurant
+- Created Schema for restaurants
+  - POST API to add multiple restaurants
+  - GET API to get all the restaurant when home page loads
+
+- Created Schema for Products with resId as field also
+  - Created post api to add products to the restaurant with categories
+  - Created get API to get the Product list using restaurantId
+
+- Created Schema for Cart with refernce to User
+  - API to add items to cart
+  - API to update cart
+  - API to remove items from cart
+  - API to show cart
+  - API to generate Sharable link of user cart using uuid (Universally Unique Identifiers) library
+  - API to access shared cart using link
+
+- Create route for Profile section
+  - Create api to view the user profile
+  - Create api to edit the user profile with allowed fields

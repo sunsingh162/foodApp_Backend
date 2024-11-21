@@ -6,6 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const cartRouter = express.Router();
 
+// API to add items to cart
 cartRouter.post("/addToCart", userAuth, async (req, res) => {
   try {
     const userId = req.user._id;
@@ -40,6 +41,7 @@ cartRouter.post("/addToCart", userAuth, async (req, res) => {
   }
 });
 
+// API to update cart
 cartRouter.put("/cart/update", userAuth, async (req, res) => {
   try {
     const userId = req.user._id;

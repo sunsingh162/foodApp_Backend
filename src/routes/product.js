@@ -27,6 +27,7 @@ productRouter.post("/addProd", async (req, res) => {
   }
 });
 
+// API to get the Product list using restaurantId
 productRouter.get("/getRes/:resId", userAuth, async (req, res) => {
   try {
     const products = await productModel.find({
